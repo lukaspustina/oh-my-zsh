@@ -12,9 +12,9 @@ if [[ "x${USER}x" = "xrootx" ]]; then
 fi
 
 if [[ "x${DL_ZSH_GIT_PROMPT}x" == "xtruex" ]]; then
-        PROMPT='${user_color}[%n@%u%m%u]%{$reset_color%} %{$fg_bold[black]%}%p %{$fg[blue]%}%~%{$fg[white]%} $(hg_prompt_info)$(git_prompt_info) ${ret_status} %{$reset_color%}'
+        PROMPT='${user_color}[${PROMPT_PREFIX}%n@%u%m%u]%{$reset_color%} %{$fg_bold[black]%}%p %{$fg[blue]%}%~%{$fg[white]%} $(hg_prompt_info)$(git_prompt_info) ${ret_status} %{$reset_color%}'
 else
-        PROMPT='${user_color}[%n@%u%m%u]%{$reset_color%} %{$fg_bold[blue]%}%p %{$g[blue]%}%~%{$fg[grey]%} ${ret_status} %{$reset_color%}'
+        PROMPT='${user_color}[${PROMPT_PREFIX}%n@%u%m%u]%{$reset_color%} %{$fg_bold[blue]%}%p %{$fg[blue]%}%~%{$fg[grey]%} ${ret_status} %{$reset_color%}'
 fi
 
 export LSCOLORS=""
