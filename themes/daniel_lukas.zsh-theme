@@ -1,4 +1,9 @@
-local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ %s)"
+if [[ $TWO_LINE_PROMPT == yes ]]; then
+        local NEWLINE=$'\n'
+        local ret_status="%(?:%{$fg_bold[green]%}${NEWLINE}➜ :%{$fg_bold[red]%}${NEWLINE}➜ %s)"
+else
+        local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ %s)"
+fi
 
 user_color=""
 
